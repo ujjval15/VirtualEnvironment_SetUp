@@ -1,0 +1,25 @@
+#How To Chenge Execution Policy for virtual environment(open powershell or cmd as administration)
+==> set -executionpolicy remoteassign
+
+#how to install virtualenvironment (virtualenv is a tool. It is used to create isolated Python environments. )
+==> pip install virtualenv
+
+#To assign a name to your virtual environment, use command
+==> virtualenv virtualenv_name
+
+#how to activate virtualenvironment
+==> .\ filename\Scripts\activate
+
+'''how to create reqirement.txt file(The file will contain all the details related to the external packages 
+that we have installed along with their versions. 
+By having the requirement.txt file, 
+we can create our virtual machine again easily by downloading all the same libraries, 
+having the same versions by a simple command. )'''
+==> pip freeze > requirement.txt
+
+#how to install requirement.txt of others virtualenvironment projects
+==> pip install -r .\requirement.txt
+
+#how to install virtualenvironment along with your base python packages
+==> virtualenv --system-site-packages "filename you want" 
+
